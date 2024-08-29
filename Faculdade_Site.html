@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Reserva de Viagem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Reserva de Viagem</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Dados da Viagem</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Serviços Desejados</legend>
+            <label><input type="checkbox" name="servicos" value="Compra de Passagens"> Compra de Passagens</label>
+            <label><input type="checkbox" name="servicos" value="Reserva de Hospedagem"> Reserva de Hospedagem</label>
+            <label><input type="checkbox" name="servicos" value="Aluguel de Veículos"> Aluguel de Veículos</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Forma de Pagamento</legend>
+            <label><input type="radio" name="pagamento" value="Cartão de Crédito"> Cartão de Crédito</label>
+            <label><input type="radio" name="pagamento" value="Boleto"> Boleto</label>
+            <label><input type="radio" name="pagamento" value="PIX"> PIX</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Prazo de Pagamento</legend>
+            <label for="prazo">Escolha o prazo de pagamento:</label>
+            <select id="prazo" name="prazo">
+                <option value="à-vista">À Vista</option>
+                <option value="cinco-vezes">Cinco Vezes Sem Juros</option>
+                <option value="dez-vezes">Dez Vezes Com Juros</option>
+            </select>
+        </fieldset>
+
+        <input type="submit" value="Enviar Reserva">
+    </form>
+</body>
+</html>
